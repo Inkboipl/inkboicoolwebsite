@@ -18,7 +18,7 @@
       font-size: 24px;
       margin-bottom: 20px;
     }
-    #clickBtn, #saveBtn, #resetBtn {
+    #clickBtn, #saveBtn, #resetBtn, #discordBtn, #privateBtn {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -29,17 +29,25 @@
       letter-spacing: 1px;
       margin: 10px;
     }
-    #clickBtn:hover, #saveBtn:hover, #resetBtn:hover {
+    #clickBtn:hover, #saveBtn:hover, #resetBtn:hover, #discordBtn:hover, #privateBtn:hover {
       background-color: #999999; /* Lighter gray button on hover */
     }
   </style>
 </head>
 <body>
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://s17.aconvert.com/convert/p3r68-cdx67/fgf5l-kt2zt.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
   <h1>inkbois cooler clicker game</h1>
   <div id="score">Score: <span id="scoreValue">0</span></div>
   <button id="clickBtn" onclick="increaseScore()">+1 ink!</button>
   <button id="saveBtn" onclick="saveProgress()">Save Progress</button>
   <button id="resetBtn" onclick="resetScore()">Reset Score</button>
+  <a href="https://discord.com/invite/zXNQ7kqqPP" target="_blank"><button id="discordBtn">Join our Discord</button></a>
+  <button id="privateBtn" onclick="redirectToPrivateServer()">Join Private Server</button>
 
   <script>
     let score = 0;
@@ -47,6 +55,9 @@
     function increaseScore() {
       score++;
       document.getElementById('scoreValue').innerText = score;
+      if (score >= 500) {
+        document.getElementById('privateBtn').style.display = 'inline-block'; // Display the private button
+      }
     }
 
     function saveProgress() {
@@ -58,7 +69,12 @@
       score = 0;
       document.getElementById('scoreValue').innerText = score;
       localStorage.removeItem('clickerScore');
+      document.getElementById('privateBtn').style.display = 'none'; // Hide the private button
       alert('Score reset successfully!');
+    }
+
+    function redirectToPrivateServer() {
+      window.location.href = "https://youtu.be/o-YBDTqX_ZU?si=a6exJ9z-QHIlqyde"; // Redirect to private server link
     }
 
     // Load saved progress on page load
@@ -66,6 +82,9 @@
       if(localStorage.getItem('clickerScore') !== null) {
         score = parseInt(localStorage.getItem('clickerScore'));
         document.getElementById('scoreValue').innerText = score;
+        if (score >= 500) {
+          document.getElementById('privateBtn').style.display = 'inline-block'; // Display the private button if score is already >= 500
+        }
       }
     }
   </script>
