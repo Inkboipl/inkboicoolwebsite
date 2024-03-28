@@ -1,0 +1,311 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  background-color: #333333; /* Dark gray background */
+  color: #CCCCCC; /* Light gray text */
+}
+
+h1 {
+  font-size: 36px;
+}
+
+#score {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#clickBtn,
+#saveBtn,
+#resetBtn,
+#discordBtn,
+#privateBtn,
+#muteBtn,
+#shopBtn { /* Added shopBtn */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #666666; /* Medium gray button */
+  border: 2px solid #CCCCCC; /* Light gray border */
+  color: #FFFFFF; /* White text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+#clickBtn:hover,
+#saveBtn:hover,
+#resetBtn:hover,
+#privateBtn:hover,
+#muteBtn:hover,
+#shopBtn:hover { /* Added shopBtn */
+  background-color: #999999; /* Lighter gray button on hover */
+}
+
+#buyMultiplierBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #666666; /* Medium gray button */
+  border: 2px solid #CCCCCC; /* Light gray border */
+  color: #FFFFFF; /* White text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+#buyMultiplierBtn:hover {
+  background-color: #999999; /* Lighter gray button on hover */
+}
+
+/* CSS Styles */
+#discordBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #666666; /* Medium gray button */
+  border: 2px solid #CCCCCC; /* Light gray border */
+  color: #FFFFFF; /* White text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Add transition for smoother animation */
+}
+
+#discordBtn:hover {
+  background-color: #999999; /* Lighter gray button on hover */
+  transform: translateY(-2px); /* Apply a small upward movement on hover for 3D effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+}
+
+
+.progress-bar-container {
+  width: 10%;
+  height: 10px; /* Reduced height */
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 0.5s ease; /* Add transition for smoother animation */
+}
+
+.smooth-element {
+  transition: all 0.3s ease; /* Add smooth transition for all properties */
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#buyMultiplierBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FFA500; /* Orange button */
+  border: 2px solid #FFA500; /* Orange border */
+  color: #FFFFFF; /* White text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+#buyMultiplierBtn:hover {
+  background-color: #FFD700; /* Lighter orange button on hover */
+  border-color: #FFD700; /* Lighter orange border on hover */
+}
+hr {
+  border: 0; /* Remove default border */
+  height: 2px; /* Set height */
+  background-color: #ccc; /* Set background color */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* CSS Styles */
+.tutorial-modal .modal-content {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #1abc9c; /* Updated background color */
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.tutorial-modal h2 {
+  color: #fff; /* White */
+  font-size: 24px;
+}
+
+.tutorial-modal .highlight {
+  color: #ffcc00; /* Yellow */
+  font-weight: bold;
+}
+
+.tutorial-modal .instruction {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333; /* Dark gray */
+}
+
+.tutorial-modal ol {
+  margin-top: 10px;
+  color: #fff; /* White */
+}
+
+.tutorial-modal ol li {
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  border: 0; /* Remove default border */
+  height: 2px; /* Set height */
+  background-color: #ccc; /* Light gray background */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+
+/* CSS Styles */
+.modal-content {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #1a1a1a; /* Dark gray background */
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #fff; /* White */
+  font-size: 24px;
+}
+
+.highlight {
+  color: #ffcc00; /* Yellow */
+  font-weight: bold;
+}
+
+.instruction {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff; /* White */
+}
+
+ol {
+  margin-top: 10px;
+  color: #fff; /* White */
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #666666; /* Medium gray button */
+  border: 2px solid #333; /* Dark gray border */
+  color: #ffffff; /* White text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Add transition for smoother animation */
+}
+
+.button:hover {
+  background-color: #999999; /* Lighter gray button on hover */
+  transform: translateY(-2px); /* Apply a small upward movement on hover for 3D effect */
+}
+
+/* CSS Styles */
+#clickBtn:hover,
+#saveBtn:hover,
+#resetBtn:hover,
+#discordBtn:hover,
+#privateBtn:hover,
+#muteBtn:hover,
+#shopBtn:hover, /* Added shopBtn */
+#buyMultiplierBtn:hover { /* Added buyMultiplierBtn */
+background-color: #999999; /* Lighter gray button on hover */
+transform: translateY(-2px); /* Apply a small upward movement on hover for 3D effect */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+transition: all 0.3s ease; /* Add transition for smoother animation */
+border: 2px solid #CCCCCC; /* Light gray border */
+text-transform: uppercase;
+}
+
+/* CSS Styles */
+#moreUpgradesBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: not-allowed; /* Change cursor to indicate button is not clickable */
+  background-color: #CCCCCC; /* Light gray button */
+  border: 2px solid #999999; /* Dark gray border */
+  color: #666666; /* Dark gray text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#moreUpgradesBtn:hover {
+  background-color: #CCCCCC; /* Light gray button on hover */
+  border-color: #999999; /* Dark gray border on hover */
+}
+
+header {
+  background-color: #444444; /* Dark gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #FFFFFF; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+#playTime {
+  font-size: 20px;
+  color: #FFFFFF; /* White text */
+  background-color: #333333; /* Dark gray background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light gray background color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e7fff; /* Blue color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c5fff; /* Darker blue color of the scrollbar handle on hover */
+}
