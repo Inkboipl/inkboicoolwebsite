@@ -36,7 +36,10 @@
 </head>
 <body>
   <!-- Background music -->
-  <iframe src="https://audio.jukehost.co.uk/62qlkTZeByAv1XyLC80uTUVVFoK29gvB" allow="autoplay" style="display:none;"></iframe>
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/allan_website_music (1).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <h1>inkbois cooler clicker game</h1>
   <div id="score">Score: <span id="scoreValue">0</span></div>
@@ -49,6 +52,7 @@
 
   <script>
     let score = 0;
+    let bgMusic = document.getElementById('bgMusic');
     let isMuted = false;
 
     function increaseScore() {
@@ -77,12 +81,14 @@
     }
 
     function toggleMute() {
-      isMuted = !isMuted;
-      if (isMuted) {
+      if (!isMuted) {
+        bgMusic.pause();
         document.getElementById('muteBtn').innerText = 'Unmute Music';
       } else {
+        bgMusic.play();
         document.getElementById('muteBtn').innerText = 'Mute Music';
       }
+      isMuted = !isMuted;
     }
 
     // Load saved progress on page load
