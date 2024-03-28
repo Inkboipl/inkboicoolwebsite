@@ -18,7 +18,7 @@
       font-size: 24px;
       margin-bottom: 20px;
     }
-    #clickBtn, #saveBtn, #resetBtn, #discordBtn, #privateBtn {
+    #clickBtn, #saveBtn, #resetBtn, #discordBtn, #privateBtn, #muteBtn {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -29,14 +29,14 @@
       letter-spacing: 1px;
       margin: 10px;
     }
-    #clickBtn:hover, #saveBtn:hover, #resetBtn:hover, #discordBtn:hover, #privateBtn:hover {
+    #clickBtn:hover, #saveBtn:hover, #resetBtn:hover, #discordBtn:hover, #privateBtn:hover, #muteBtn:hover {
       background-color: #999999; /* Lighter gray button on hover */
     }
   </style>
 </head>
 <body>
   <!-- Background music -->
-  <audio controls autoplay>
+  <audio id="bgMusic" autoplay loop>
     <source src="https://s17.aconvert.com/convert/p3r68-cdx67/fgf5l-kt2zt.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -48,9 +48,11 @@
   <button id="resetBtn" onclick="resetScore()">Reset Score</button>
   <a href="https://discord.com/invite/zXNQ7kqqPP" target="_blank"><button id="discordBtn">Join our Discord</button></a>
   <button id="privateBtn" onclick="redirectToPrivateServer()">Join Private Server</button>
+  <button id="muteBtn" onclick="toggleMute()">Mute Music</button>
 
   <script>
     let score = 0;
+    let bgMusic = document.getElementById('bgMusic');
 
     function increaseScore() {
       score++;
@@ -75,6 +77,16 @@
 
     function redirectToPrivateServer() {
       window.location.href = "https://youtu.be/o-YBDTqX_ZU?si=a6exJ9z-QHIlqyde"; // Redirect to private server link
+    }
+
+    function toggleMute() {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        document.getElementById('muteBtn').innerText = 'Mute Music';
+      } else {
+        bgMusic.pause();
+        document.getElementById('muteBtn').innerText = 'Unmute Music';
+      }
     }
 
     // Load saved progress on page load
